@@ -1,0 +1,96 @@
+.catalog {
+    flex: 1;
+    padding: 28px 0px 20px;
+    // &_pt28 {
+    //     margin-top: 28px;
+    // }
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #838383;
+    }
+    &__product-group {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 350px));
+        grid-template-rows: minmax(200px, 407px);
+        grid-auto-rows: minmax(200px, 407px);
+        gap: 30px;
+        margin-top: 20px;
+    }
+    &__product {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    &__wrapper-image {
+        height: 264px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__description {
+        height: 130px;
+        width: 100%;
+        display: grid;
+        grid-template-columns:  2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 28px 22px 32px;
+    }
+    &__name {
+        place-self: start start;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        color: #1C1C27;
+    }
+    &__price {
+        place-self: start end;
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+        width: 59px;
+        font-style: normal;
+        font-weight: 600;
+        color: #FFA542;
+    }
+    &__final-price {
+        font-size: 17px;
+        line-height: 21px;
+    }
+    &__discount {
+        font-size: 13px;
+        line-height: 16px;
+        text-decoration-line: line-through;
+    }
+    &__rate {
+        place-self: end start;
+        width: 58px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 100%;
+    }
+    &__button {
+        place-self: end end;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000000;
+        background-color: #FFFFFF;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__wireless {
+        padding-top: 28px;
+    }
+}

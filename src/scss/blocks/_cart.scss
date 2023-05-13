@@ -1,0 +1,169 @@
+.cart {
+    flex: 1;
+    padding: 29px 0px 20px;
+    &__title {
+        margin-bottom: 13px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #1C1C27;
+    }
+    &__wrapper-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__product-group {
+        display: grid;
+        grid-template-columns: minmax(420px, 633px);
+        grid-template-rows: minmax(130px, 218px);
+        grid-auto-rows: minmax(130px, 218px);
+        row-gap: 15px;
+    }
+    &__product-card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 68px) 64px;
+        padding: 18px 28px 0px 18px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    &__image {
+        width: 146px;
+        height: 136px;
+        grid-row: 1 / 3;
+        place-self: end center;
+    }
+    &__wrapper-counter {
+        width: 125px;
+        grid-row: 3 / 4;
+        place-self: center center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000000;
+    }
+    &__counter {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #FFCE7F;
+        border: none;
+        border-radius: 50%;
+        &:focus {
+            outline: none;
+        }
+        &_reduce {
+            &::before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #FFFFFF;
+            }    
+        }
+        &_add {
+            &::before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #FFFFFF;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left:  50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 14px;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+    &__name {
+        padding-left: 25px;
+        grid-row: 1 / 3;
+        grid-column: 2 / 4;
+        place-self: center start;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #1C1C27;
+    }
+    &__unit-price {
+        padding-left: 25px;
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+        place-self: center start;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #AAAAAA;
+    }
+    &__delete {
+        grid-column: 4 / 5;
+        place-self: start end;
+        cursor: pointer;
+    }
+    &__product-final-price {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        place-self: center end;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #1C1C27;
+    }
+
+    &__total {
+        width: 350px;
+        height: 120px;
+        padding: 22px 16px 0px 22px;
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    &__total-price {
+        display: flex;
+        justify-content: space-between;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+    }
+    &__button-buy {
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #101010;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border: none;
+        border-radius: 20px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        text-align: center;
+        color: #FFFFFF;
+        &:focus {
+            outline: none;
+        }
+    }
+}
